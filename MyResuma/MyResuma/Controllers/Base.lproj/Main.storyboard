@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A2H-cK-g2A">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Your Resume(s)-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ResumeListViewController" customModule="MyResuma" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VtV-J4-jSU">
+                                <rect key="frame" x="0.0" y="88" width="414" height="730"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="nWc-GV-Q3q" userLabel="HeaderView">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="4"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="ieL-4T-m7v" userLabel="FooterView">
+                                    <rect key="frame" x="0.0" y="276" width="414" height="4"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ResumeTableViewCell" rowHeight="205" id="Sso-Eg-iAL" customClass="ResumeTableViewCell" customModule="MyResuma" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="48.5" width="414" height="205"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sso-Eg-iAL" id="e3A-rm-nQh">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ou-Mh-pyG">
+                                                    <rect key="frame" x="16" y="4" width="382" height="92"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="753" translatesAutoresizingMaskIntoConstraints="NO" id="C7f-eb-z62">
+                                                            <rect key="frame" x="16" y="16" width="60" height="60"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="60" id="geW-hE-cDr"/>
+                                                                <constraint firstAttribute="width" constant="60" id="gfB-PJ-EqX"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="753" text="Resume Name" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3B-zr-HPX">
+                                                            <rect key="frame" x="92" y="16" width="170" height="60"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTa-Q1-fQj">
+                                                            <rect key="frame" x="270" y="24" width="44" height="44"/>
+                                                            <color key="backgroundColor" red="0.56721269883558401" green="0.90804905805391134" blue="0.69451489471042804" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="44" id="5i9-Nt-X9l"/>
+                                                                <constraint firstAttribute="height" constant="44" id="nuS-HO-cVp"/>
+                                                            </constraints>
+                                                            <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" title="Button" image="ic_copy"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="22"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="btnCopyDidTapped:" destination="Sso-Eg-iAL" eventType="touchUpInside" id="atm-hO-sp1"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="753" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFh-Kj-wXW">
+                                                            <rect key="frame" x="322" y="24" width="44" height="44"/>
+                                                            <color key="backgroundColor" red="0.92125782094050934" green="0.75788717705534669" blue="0.68659542102941096" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="44" id="G2t-XT-cq3"/>
+                                                                <constraint firstAttribute="width" constant="44" id="JF4-qn-1Bg"/>
+                                                            </constraints>
+                                                            <inset key="contentEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" title="Button" image="ic_delete"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="22"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="btnDeleteDidTapped:" destination="Sso-Eg-iAL" eventType="touchUpInside" id="MBt-Vq-wgt"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="kTa-Q1-fQj" firstAttribute="leading" secondItem="o3B-zr-HPX" secondAttribute="trailing" constant="8" id="EdQ-ym-QiI"/>
+                                                        <constraint firstItem="kTa-Q1-fQj" firstAttribute="centerY" secondItem="VFh-Kj-wXW" secondAttribute="centerY" id="Fot-Tx-uDX"/>
+                                                        <constraint firstItem="C7f-eb-z62" firstAttribute="top" secondItem="5ou-Mh-pyG" secondAttribute="top" constant="16" id="Jp7-9s-18u"/>
+                                                        <constraint firstItem="VFh-Kj-wXW" firstAttribute="leading" secondItem="kTa-Q1-fQj" secondAttribute="trailing" constant="8" id="QtR-oU-gye"/>
+                                                        <constraint firstItem="C7f-eb-z62" firstAttribute="leading" secondItem="5ou-Mh-pyG" secondAttribute="leading" constant="16" id="Tnv-yl-DzL"/>
+                                                        <constraint firstAttribute="bottom" secondItem="o3B-zr-HPX" secondAttribute="bottom" constant="16" id="a7s-MP-fVg"/>
+                                                        <constraint firstAttribute="trailing" secondItem="VFh-Kj-wXW" secondAttribute="trailing" constant="16" id="bxt-gF-Ff2"/>
+                                                        <constraint firstItem="o3B-zr-HPX" firstAttribute="leading" secondItem="C7f-eb-z62" secondAttribute="trailing" constant="16" id="eIc-nS-433"/>
+                                                        <constraint firstItem="VFh-Kj-wXW" firstAttribute="centerY" secondItem="5ou-Mh-pyG" secondAttribute="centerY" id="k62-xG-94v"/>
+                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="C7f-eb-z62" secondAttribute="bottom" constant="16" id="nwc-sK-Ohd"/>
+                                                        <constraint firstItem="o3B-zr-HPX" firstAttribute="top" secondItem="5ou-Mh-pyG" secondAttribute="top" constant="16" id="uKk-Dv-rCn"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="5ou-Mh-pyG" secondAttribute="trailing" constant="16" id="5W1-GG-Wo3"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="5ou-Mh-pyG" secondAttribute="bottom" constant="4" id="mfZ-QE-OMz"/>
+                                                <constraint firstItem="5ou-Mh-pyG" firstAttribute="top" secondItem="e3A-rm-nQh" secondAttribute="top" constant="4" id="qO9-RU-F2y"/>
+                                                <constraint firstItem="5ou-Mh-pyG" firstAttribute="leading" secondItem="e3A-rm-nQh" secondAttribute="leading" constant="16" id="yEh-NW-ET8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageViewProfile" destination="C7f-eb-z62" id="bkl-Qr-7DA"/>
+                                            <outlet property="lblTitle" destination="o3B-zr-HPX" id="sZD-Zg-fJQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="8zz-8j-yhr"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="0sO-Dj-tjl"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqw-js-Xai">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="CFz-sj-KzQ"/>
+                                </constraints>
+                                <color key="tintColor" red="0.25490197539999998" green="0.57254904510000004" blue="0.3058823645" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <buttonConfiguration key="configuration" style="plain" title="  New Resume"/>
+                                <connections>
+                                    <action selector="btnAddDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D8a-6X-ZhE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hqw-js-Xai" secondAttribute="bottom" id="1e3-jk-fKq"/>
+                            <constraint firstItem="hqw-js-Xai" firstAttribute="top" secondItem="VtV-J4-jSU" secondAttribute="bottom" id="ALi-vo-KJW"/>
+                            <constraint firstItem="VtV-J4-jSU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DWX-ML-t9G"/>
+                            <constraint firstItem="VtV-J4-jSU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FNv-fe-jKI"/>
+                            <constraint firstItem="hqw-js-Xai" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UqY-Df-uhb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hqw-js-Xai" secondAttribute="trailing" id="oV0-Hm-e0V"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VtV-J4-jSU" secondAttribute="trailing" id="vrF-fa-FlL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Your Resume(s)" id="KPB-ve-xpg"/>
+                    <connections>
+                        <outlet property="tableViewResumeList" destination="VtV-J4-jSU" id="66b-7I-QSE"/>
+                        <segue destination="Npr-rk-Wsu" kind="show" identifier="goEdit" id="uYJ-XY-CW2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="83.705357142857139"/>
+        </scene>
+        <!--Resume Detail View Controller-->
+        <scene sceneID="LHA-XT-J9B">
+            <objects>
+                <viewController id="Npr-rk-Wsu" customClass="ResumeDetailViewController" customModule="MyResuma" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rCd-a3-pMT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cJt-jb-ios"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="giQ-BR-pRF">
+                        <rightBarButtonItems>
+                            <barButtonItem image="ic_export_pdf" style="plain" id="rU2-BJ-lHl"/>
+                            <barButtonItem image="ic_edit" style="plain" id="Bbf-R5-GTk">
+                                <connections>
+                                    <action selector="btnEditTitleDidTapped:" destination="Npr-rk-Wsu" id="d3J-Ng-0KN"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MOV-RL-xjY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1803" y="84"/>
+        </scene>
+        <!--Custom Navigation Controller-->
+        <scene sceneID="fdo-Kb-dYf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A2H-cK-g2A" customClass="CustomNavigationController" customModule="MyResuma" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Txt-uW-Q53">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="backImage" value="ic_back"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4Ue-4U-n1V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TIe-d6-bgS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_back" width="20" height="20"/>
+        <image name="ic_copy" width="36" height="36"/>
+        <image name="ic_delete" width="36" height="36"/>
+        <image name="ic_edit" width="24" height="24"/>
+        <image name="ic_export_pdf" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

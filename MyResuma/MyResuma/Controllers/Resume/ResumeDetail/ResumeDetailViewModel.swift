@@ -67,6 +67,15 @@ extension ResumeDetailViewModel {
         }
     }
     
+    func updateName(_ input:String?) {
+        if self.resume.value.name != input {
+            self.resume.value.name = input
+            if !ResumeManager.updateResume(resume: self.resume.value) {
+                self.errorCannotUpdate()
+            }
+        }
+    }
+    
     func updateMobile(_ input:String?) {
         if self.resume.value.mobile != input {
             self.resume.value.mobile = input

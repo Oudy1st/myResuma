@@ -15,6 +15,7 @@ class ResumeInfo: Codable {
     var profileImageData:Data?
     
     //general information
+    var name:String! = ""
     var mobile:String?
     var email:String?
     var address:String?
@@ -52,6 +53,20 @@ class WorkExperience:Codable {
     var companyName:String?
     var startYear:String?
     var endYear:String?
+    
+    func displayYearRange() -> String {
+        var result = ""
+        if let start = startYear?.trimmingCharacters(in: .whitespaces) {
+            result.append("\(start) - ")
+            if let end = endYear?.trimmingCharacters(in: .whitespaces), end.count > 0 {
+                result.append(end)
+            }
+            else {
+                result.append("present")
+            }
+        }
+        return result
+    }
 }
 
 class ProjectExperience:Codable {

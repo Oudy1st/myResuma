@@ -47,6 +47,73 @@ extension UIImage {
         return nil
     }
     
+    func cropImageToProfileImage() -> UIImage? {
+        var image = self
+        if image.cgImage == nil {
+            UIGraphicsBeginImageContextWithOptions(image.size, false, 1.0)
+            self.draw(in: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
+            image = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+        }
+        
+        
+
+        var scaleWH = 2.0/3.0
+        
+        var preferWidth:CGFloat
+        var preferHeight:CGFloat
+        
+        preferWidth = image.size.width
+        preferHeight = preferWidth / scaleWH
+        
+        if image.size.height < preferHeight {
+            // crop width
+            preferHeight = self.size.height
+            preferWidth = preferHeight * scaleWH
+        }
+        let size = CGSize(width: preferWidth, height: preferHeight)
+        
+        if image.imageOrientation == .left ||
+            image.imageOrientation == .leftMirrored ||
+            image.imageOrientation == .right ||
+            image.imageOrientation == .rightMirrored
+        {
+            //rotate
+            
+            let refWidth : CGFloat = CGFloat(image.cgImage!.height)
+            let refHeight : CGFloat = CGFloat(image.cgImage!.width)
+
+            let y = (refWidth - size.width) / 2
+            let x = (refHeight - size.height) / 2
+
+            let cropRect = CGRect(x: x, y: y, width: size.height, height: size.width)
+            if let imageRef = image.cgImage!.cropping(to: cropRect) {
+                let newImage = UIImage(cgImage: imageRef, scale: 0, orientation: image.imageOrientation)
+                return newImage
+            }
+        }
+        else {
+            
+            
+            let refWidth : CGFloat = CGFloat(image.cgImage!.width)
+            let refHeight : CGFloat = CGFloat(image.cgImage!.height)
+
+            let x = (refWidth - size.width) / 2
+            let y = (refHeight - size.height) / 2
+
+            let cropRect = CGRect(x: x, y: y, width: size.width, height: size.height)
+            if let imageRef = image.cgImage!.cropping(to: cropRect) {
+                let newImage = UIImage(cgImage: imageRef, scale: 0, orientation: image.imageOrientation)
+                return newImage
+            }
+        }
+        
+        
+
+        
+        return nil
+    }
+    
     func resizeImage(targetSize: CGSize) -> UIImage {
         let size = self.size
         

@@ -24,6 +24,7 @@ class ResumeDetailViewController: UIViewController {
     
     
     @IBOutlet weak var imageViewProfile: UIImageView!
+    @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var txtMobile: UITextField!
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtTotalYear: UITextField!
@@ -45,6 +46,7 @@ class ResumeDetailViewController: UIViewController {
             
             self?.imageViewProfile.image = resumeInfo.profileImage()
             
+            self?.txtName.text = resumeInfo.name
             self?.txtMobile.text = resumeInfo.mobile
             self?.txtEmail.text = resumeInfo.email
             self?.txtAddress.text = resumeInfo.address
@@ -350,6 +352,9 @@ extension ResumeDetailViewController : UITextFieldDelegate, UITextViewDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         switch textField {
+        case self.txtName :
+            self.viewModel.updateName(self.txtName.text)
+            break
         case self.txtMobile :
             self.viewModel.updateMobile(self.txtMobile.text)
             break
@@ -386,30 +391,57 @@ extension ResumeDetailViewController : UITextFieldDelegate, UITextViewDelegate {
 extension ResumeDetailViewController:UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func openImagePicker() {
-        self.imagePickerController = UIImagePickerController()
         
-
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera)
         {
-            self.imagePickerController.sourceType = .camera
-            self.imagePickerController.cameraCaptureMode = .photo
+            let alertC = UIAlertController.init(title: "Choose Profile", message: nil, preferredStyle: .actionSheet)
+            alertC.addAction(.init(title: "Camera", style: .default, handler: { [weak self] _ in
+                self?.openCamera()
+            }))
+            alertC.addAction(.init(title: "Album", style: .default, handler: { [weak self] _ in
+                self?.openAlbum()
+            }))
+            self.present(alertC, animated: true, completion: nil)
         }
         else
         {
-            self.imagePickerController.sourceType = .savedPhotosAlbum
+            self.openAlbum()
         }
+        
+    }
+    
+    func openCamera() {
+        self.imagePickerController = UIImagePickerController()
+        
+
+        self.imagePickerController.sourceType = .camera
+        self.imagePickerController.cameraCaptureMode = .photo
+        self.imagePickerController.showsCameraControls = true
+        
         self.imagePickerController.delegate = self
 
 
         self.present(self.imagePickerController, animated: true, completion: nil)
     }
     
+    func openAlbum() {
+        self.imagePickerController = UIImagePickerController()
+        
+        self.imagePickerController.sourceType = .savedPhotosAlbum
+        
+        self.imagePickerController.delegate = self
+
+
+        self.present(self.imagePickerController, animated: true, completion: nil)
+    }
+    
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 
         DispatchQueue.main.async {
             
             if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage,
-               let croppedImage = pickedImage.cropImageToSquare()
+               let croppedImage = pickedImage.cropImageToProfileImage()
             {
                 self.viewModel.updateProfileImage(croppedImage)
             }

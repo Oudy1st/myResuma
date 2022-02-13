@@ -10,6 +10,14 @@
 		DD31AD6E27B7C9CA0094C7FF /* ExportTemplate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD31AD6D27B7C9CA0094C7FF /* ExportTemplate.storyboard */; };
 		DD31AD7327B89FEF0094C7FF /* TemplateSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD31AD7227B89FEF0094C7FF /* TemplateSelectionViewController.swift */; };
 		DD31AD7527B8A1580094C7FF /* TemplateSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD31AD7427B8A1580094C7FF /* TemplateSelectionViewModel.swift */; };
+		DD31AD7727B8BA3A0094C7FF /* TemplateInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD31AD7627B8BA3A0094C7FF /* TemplateInfo.swift */; };
+		DD31AD7927B8CC0D0094C7FF /* PDFCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD31AD7827B8CC0D0094C7FF /* PDFCreator.swift */; };
+		DD31AD7B27B8CF860094C7FF /* PDFPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD31AD7A27B8CF860094C7FF /* PDFPreviewViewController.swift */; };
+		DD31AD7D27B8D16D0094C7FF /* PDFPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD31AD7C27B8D16D0094C7FF /* PDFPreviewViewModel.swift */; };
+		DD31AD7F27B8FF110094C7FF /* PDFLayoutClassic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD31AD7E27B8FF110094C7FF /* PDFLayoutClassic.swift */; };
+		DD31AD8127B9009E0094C7FF /* PDFLayoutClassicNoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD31AD8027B9009E0094C7FF /* PDFLayoutClassicNoImage.swift */; };
+		DD31AD8527B90C8B0094C7FF /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD31AD8427B90C8B0094C7FF /* FileHelper.swift */; };
+		DD31AD8727B997780094C7FF /* PDFLayoutBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD31AD8627B997780094C7FF /* PDFLayoutBar.swift */; };
 		DD8AB0AB27B64D4C00343699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8AB0AA27B64D4C00343699 /* AppDelegate.swift */; };
 		DD8AB0AD27B64D4C00343699 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8AB0AC27B64D4C00343699 /* SceneDelegate.swift */; };
 		DD8AB0AF27B64D4C00343699 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8AB0AE27B64D4C00343699 /* ViewController.swift */; };
@@ -61,6 +69,14 @@
 		DD31AD6D27B7C9CA0094C7FF /* ExportTemplate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExportTemplate.storyboard; sourceTree = "<group>"; };
 		DD31AD7227B89FEF0094C7FF /* TemplateSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateSelectionViewController.swift; sourceTree = "<group>"; };
 		DD31AD7427B8A1580094C7FF /* TemplateSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateSelectionViewModel.swift; sourceTree = "<group>"; };
+		DD31AD7627B8BA3A0094C7FF /* TemplateInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateInfo.swift; sourceTree = "<group>"; };
+		DD31AD7827B8CC0D0094C7FF /* PDFCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFCreator.swift; sourceTree = "<group>"; };
+		DD31AD7A27B8CF860094C7FF /* PDFPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFPreviewViewController.swift; sourceTree = "<group>"; };
+		DD31AD7C27B8D16D0094C7FF /* PDFPreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFPreviewViewModel.swift; sourceTree = "<group>"; };
+		DD31AD7E27B8FF110094C7FF /* PDFLayoutClassic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFLayoutClassic.swift; sourceTree = "<group>"; };
+		DD31AD8027B9009E0094C7FF /* PDFLayoutClassicNoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFLayoutClassicNoImage.swift; sourceTree = "<group>"; };
+		DD31AD8427B90C8B0094C7FF /* FileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
+		DD31AD8627B997780094C7FF /* PDFLayoutBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFLayoutBar.swift; sourceTree = "<group>"; };
 		DD8AB0A727B64D4C00343699 /* MyResuma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyResuma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD8AB0AA27B64D4C00343699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD8AB0AC27B64D4C00343699 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,8 +168,20 @@
 		DD31AD7127B7C9F30094C7FF /* PDFPreview */ = {
 			isa = PBXGroup;
 			children = (
+				DD31AD7A27B8CF860094C7FF /* PDFPreviewViewController.swift */,
+				DD31AD7C27B8D16D0094C7FF /* PDFPreviewViewModel.swift */,
 			);
 			path = PDFPreview;
+			sourceTree = "<group>";
+		};
+		DD31AD8227B900AC0094C7FF /* PDFLayoutLogic */ = {
+			isa = PBXGroup;
+			children = (
+				DD31AD7E27B8FF110094C7FF /* PDFLayoutClassic.swift */,
+				DD31AD8027B9009E0094C7FF /* PDFLayoutClassicNoImage.swift */,
+				DD31AD8627B997780094C7FF /* PDFLayoutBar.swift */,
+			);
+			path = PDFLayoutLogic;
 			sourceTree = "<group>";
 		};
 		DD8AB09E27B64D4C00343699 = {
@@ -179,7 +207,7 @@
 		DD8AB0A927B64D4C00343699 /* MyResuma */ = {
 			isa = PBXGroup;
 			children = (
-				DD8AB0F027B6A40E00343699 /* DataController */,
+				DD8AB0F027B6A40E00343699 /* Helper */,
 				DD8AB0E027B6744300343699 /* Models */,
 				DD8AB0DF27B6742C00343699 /* Controllers */,
 				DD8AB0DA27B66F4E00343699 /* Utilities */,
@@ -239,6 +267,7 @@
 			children = (
 				DD8AB0E927B6756500343699 /* ResumeInfo.swift */,
 				DD8AB0F327B6A8AB00343699 /* ErrorAlert.swift */,
+				DD31AD7627B8BA3A0094C7FF /* TemplateInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -263,12 +292,15 @@
 			path = ResumeDetail;
 			sourceTree = "<group>";
 		};
-		DD8AB0F027B6A40E00343699 /* DataController */ = {
+		DD8AB0F027B6A40E00343699 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				DD31AD8227B900AC0094C7FF /* PDFLayoutLogic */,
 				DD8AB0F127B6A41800343699 /* ResumeManager.swift */,
+				DD31AD7827B8CC0D0094C7FF /* PDFCreator.swift */,
+				DD31AD8427B90C8B0094C7FF /* FileHelper.swift */,
 			);
-			path = DataController;
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		DD8AB0F527B6AE8D00343699 /* CustomController */ = {
@@ -422,8 +454,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD31AD7B27B8CF860094C7FF /* PDFPreviewViewController.swift in Sources */,
 				DD8AB0FB27B6B10600343699 /* ResumeDetailViewModel.swift in Sources */,
 				DD31AD7327B89FEF0094C7FF /* TemplateSelectionViewController.swift in Sources */,
+				DD31AD7D27B8D16D0094C7FF /* PDFPreviewViewModel.swift in Sources */,
+				DD31AD8727B997780094C7FF /* PDFLayoutBar.swift in Sources */,
 				DD8AB10127B74D3D00343699 /* UIimage+Crop.swift in Sources */,
 				DD31AD7527B8A1580094C7FF /* TemplateSelectionViewModel.swift in Sources */,
 				DD8AB0AF27B64D4C00343699 /* ViewController.swift in Sources */,
@@ -431,12 +466,15 @@
 				DD8AB0FF27B7371200343699 /* UIScrollView+Keyboard.swift in Sources */,
 				DD8AB10A27B7711500343699 /* ProjectViewController.swift in Sources */,
 				DD8AB0EF27B6A1CE00343699 /* LocalData.swift in Sources */,
+				DD31AD7F27B8FF110094C7FF /* PDFLayoutClassic.swift in Sources */,
 				DD8AB0E627B6747E00343699 /* ResumeListViewModel.swift in Sources */,
 				DD8AB0AB27B64D4C00343699 /* AppDelegate.swift in Sources */,
 				DD8AB10327B76E0A00343699 /* UIButton+Action.swift in Sources */,
 				DD8AB0F927B6B0F000343699 /* ResumeDetailViewController.swift in Sources */,
+				DD31AD7727B8BA3A0094C7FF /* TemplateInfo.swift in Sources */,
 				DD8AB0F427B6A8AB00343699 /* ErrorAlert.swift in Sources */,
 				DD8AB0AD27B64D4C00343699 /* SceneDelegate.swift in Sources */,
+				DD31AD8127B9009E0094C7FF /* PDFLayoutClassicNoImage.swift in Sources */,
 				DD8AB0E427B6746F00343699 /* ResumeListViewController.swift in Sources */,
 				DD8AB0E827B6754800343699 /* Box.swift in Sources */,
 				DD8AB0E227B6745D00343699 /* ResumeTableViewCell.swift in Sources */,
@@ -445,6 +483,8 @@
 				DD8AB0F227B6A41800343699 /* ResumeManager.swift in Sources */,
 				DD8AB0DC27B66F7400343699 /* UIView+Copy+Corner.swift in Sources */,
 				DD8AB0F727B6AEA700343699 /* CustomNavigationController.swift in Sources */,
+				DD31AD7927B8CC0D0094C7FF /* PDFCreator.swift in Sources */,
+				DD31AD8527B90C8B0094C7FF /* FileHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,9 +666,12 @@
 				DEVELOPMENT_TEAM = 8P6YU82U35;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyResuma/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "My Resuma";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Take or select your profile picture";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -654,9 +697,12 @@
 				DEVELOPMENT_TEAM = 8P6YU82U35;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyResuma/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "My Resuma";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Take or select your profile picture";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

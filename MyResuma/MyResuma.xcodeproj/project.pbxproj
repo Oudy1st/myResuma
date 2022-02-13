@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD31AD6E27B7C9CA0094C7FF /* ExportTemplate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD31AD6D27B7C9CA0094C7FF /* ExportTemplate.storyboard */; };
+		DD31AD7327B89FEF0094C7FF /* TemplateSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD31AD7227B89FEF0094C7FF /* TemplateSelectionViewController.swift */; };
+		DD31AD7527B8A1580094C7FF /* TemplateSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD31AD7427B8A1580094C7FF /* TemplateSelectionViewModel.swift */; };
 		DD8AB0AB27B64D4C00343699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8AB0AA27B64D4C00343699 /* AppDelegate.swift */; };
 		DD8AB0AD27B64D4C00343699 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8AB0AC27B64D4C00343699 /* SceneDelegate.swift */; };
 		DD8AB0AF27B64D4C00343699 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8AB0AE27B64D4C00343699 /* ViewController.swift */; };
@@ -16,7 +19,7 @@
 		DD8AB0C227B64D4E00343699 /* MyResumaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8AB0C127B64D4E00343699 /* MyResumaTests.swift */; };
 		DD8AB0CC27B64D4E00343699 /* MyResumaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8AB0CB27B64D4E00343699 /* MyResumaUITests.swift */; };
 		DD8AB0CE27B64D4E00343699 /* MyResumaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8AB0CD27B64D4E00343699 /* MyResumaUITestsLaunchTests.swift */; };
-		DD8AB0DC27B66F7400343699 /* UIView+Corner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8AB0DB27B66F7400343699 /* UIView+Corner.swift */; };
+		DD8AB0DC27B66F7400343699 /* UIView+Copy+Corner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8AB0DB27B66F7400343699 /* UIView+Copy+Corner.swift */; };
 		DD8AB0DE27B672B800343699 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD8AB0DD27B672B800343699 /* Images.xcassets */; };
 		DD8AB0E227B6745D00343699 /* ResumeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8AB0E127B6745D00343699 /* ResumeTableViewCell.swift */; };
 		DD8AB0E427B6746F00343699 /* ResumeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8AB0E327B6746F00343699 /* ResumeListViewController.swift */; };
@@ -29,6 +32,12 @@
 		DD8AB0F727B6AEA700343699 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8AB0F627B6AEA700343699 /* CustomNavigationController.swift */; };
 		DD8AB0F927B6B0F000343699 /* ResumeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8AB0F827B6B0F000343699 /* ResumeDetailViewController.swift */; };
 		DD8AB0FB27B6B10600343699 /* ResumeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8AB0FA27B6B10600343699 /* ResumeDetailViewModel.swift */; };
+		DD8AB0FF27B7371200343699 /* UIScrollView+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8AB0FE27B7371200343699 /* UIScrollView+Keyboard.swift */; };
+		DD8AB10127B74D3D00343699 /* UIimage+Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8AB10027B74D3D00343699 /* UIimage+Crop.swift */; };
+		DD8AB10327B76E0A00343699 /* UIButton+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8AB10227B76E0A00343699 /* UIButton+Action.swift */; };
+		DD8AB10527B770E000343699 /* WorkExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8AB10427B770E000343699 /* WorkExperienceViewController.swift */; };
+		DD8AB10827B7710800343699 /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8AB10727B7710800343699 /* EducationViewController.swift */; };
+		DD8AB10A27B7711500343699 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8AB10927B7711500343699 /* ProjectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD31AD6D27B7C9CA0094C7FF /* ExportTemplate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExportTemplate.storyboard; sourceTree = "<group>"; };
+		DD31AD7227B89FEF0094C7FF /* TemplateSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateSelectionViewController.swift; sourceTree = "<group>"; };
+		DD31AD7427B8A1580094C7FF /* TemplateSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateSelectionViewModel.swift; sourceTree = "<group>"; };
 		DD8AB0A727B64D4C00343699 /* MyResuma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyResuma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD8AB0AA27B64D4C00343699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD8AB0AC27B64D4C00343699 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +74,7 @@
 		DD8AB0C727B64D4E00343699 /* MyResumaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyResumaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD8AB0CB27B64D4E00343699 /* MyResumaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyResumaUITests.swift; sourceTree = "<group>"; };
 		DD8AB0CD27B64D4E00343699 /* MyResumaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyResumaUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		DD8AB0DB27B66F7400343699 /* UIView+Corner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Corner.swift"; sourceTree = "<group>"; };
+		DD8AB0DB27B66F7400343699 /* UIView+Copy+Corner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Copy+Corner.swift"; sourceTree = "<group>"; };
 		DD8AB0DD27B672B800343699 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DD8AB0E127B6745D00343699 /* ResumeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeTableViewCell.swift; sourceTree = "<group>"; };
 		DD8AB0E327B6746F00343699 /* ResumeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeListViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +87,12 @@
 		DD8AB0F627B6AEA700343699 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		DD8AB0F827B6B0F000343699 /* ResumeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeDetailViewController.swift; sourceTree = "<group>"; };
 		DD8AB0FA27B6B10600343699 /* ResumeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeDetailViewModel.swift; sourceTree = "<group>"; };
+		DD8AB0FE27B7371200343699 /* UIScrollView+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Keyboard.swift"; sourceTree = "<group>"; };
+		DD8AB10027B74D3D00343699 /* UIimage+Crop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIimage+Crop.swift"; sourceTree = "<group>"; };
+		DD8AB10227B76E0A00343699 /* UIButton+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Action.swift"; sourceTree = "<group>"; };
+		DD8AB10427B770E000343699 /* WorkExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkExperienceViewController.swift; sourceTree = "<group>"; };
+		DD8AB10727B7710800343699 /* EducationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationViewController.swift; sourceTree = "<group>"; };
+		DD8AB10927B7711500343699 /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +120,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD31AD6C27B7C9A90094C7FF /* ExportTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				DD31AD7127B7C9F30094C7FF /* PDFPreview */,
+				DD31AD7027B7C9E60094C7FF /* TemplateSelection */,
+				DD31AD6D27B7C9CA0094C7FF /* ExportTemplate.storyboard */,
+			);
+			path = ExportTemplate;
+			sourceTree = "<group>";
+		};
+		DD31AD6F27B7C9D40094C7FF /* Resume */ = {
+			isa = PBXGroup;
+			children = (
+				DD8AB0B027B64D4C00343699 /* Main.storyboard */,
+				DD8AB0EB27B6A0B300343699 /* ResumeList */,
+				DD8AB0EC27B6A0BC00343699 /* ResumeDetail */,
+			);
+			path = Resume;
+			sourceTree = "<group>";
+		};
+		DD31AD7027B7C9E60094C7FF /* TemplateSelection */ = {
+			isa = PBXGroup;
+			children = (
+				DD31AD7227B89FEF0094C7FF /* TemplateSelectionViewController.swift */,
+				DD31AD7427B8A1580094C7FF /* TemplateSelectionViewModel.swift */,
+			);
+			path = TemplateSelection;
+			sourceTree = "<group>";
+		};
+		DD31AD7127B7C9F30094C7FF /* PDFPreview */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PDFPreview;
+			sourceTree = "<group>";
+		};
 		DD8AB09E27B64D4C00343699 = {
 			isa = PBXGroup;
 			children = (
@@ -160,9 +214,12 @@
 		DD8AB0DA27B66F4E00343699 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				DD8AB0DB27B66F7400343699 /* UIView+Corner.swift */,
 				DD8AB0EE27B6A1CE00343699 /* LocalData.swift */,
+				DD8AB0DB27B66F7400343699 /* UIView+Copy+Corner.swift */,
 				DD8AB0E727B6754800343699 /* Box.swift */,
+				DD8AB0FE27B7371200343699 /* UIScrollView+Keyboard.swift */,
+				DD8AB10027B74D3D00343699 /* UIimage+Crop.swift */,
+				DD8AB10227B76E0A00343699 /* UIButton+Action.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -170,10 +227,9 @@
 		DD8AB0DF27B6742C00343699 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DD31AD6F27B7C9D40094C7FF /* Resume */,
+				DD31AD6C27B7C9A90094C7FF /* ExportTemplate */,
 				DD8AB0F527B6AE8D00343699 /* CustomController */,
-				DD8AB0EC27B6A0BC00343699 /* ResumeDetail */,
-				DD8AB0EB27B6A0B300343699 /* ResumeList */,
-				DD8AB0B027B64D4C00343699 /* Main.storyboard */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +256,7 @@
 		DD8AB0EC27B6A0BC00343699 /* ResumeDetail */ = {
 			isa = PBXGroup;
 			children = (
+				DD8AB10627B770F400343699 /* InputController */,
 				DD8AB0F827B6B0F000343699 /* ResumeDetailViewController.swift */,
 				DD8AB0FA27B6B10600343699 /* ResumeDetailViewModel.swift */,
 			);
@@ -220,6 +277,16 @@
 				DD8AB0F627B6AEA700343699 /* CustomNavigationController.swift */,
 			);
 			path = CustomController;
+			sourceTree = "<group>";
+		};
+		DD8AB10627B770F400343699 /* InputController */ = {
+			isa = PBXGroup;
+			children = (
+				DD8AB10427B770E000343699 /* WorkExperienceViewController.swift */,
+				DD8AB10727B7710800343699 /* EducationViewController.swift */,
+				DD8AB10927B7711500343699 /* ProjectViewController.swift */,
+			);
+			path = InputController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +396,7 @@
 				DD8AB0B727B64D4E00343699 /* LaunchScreen.storyboard in Resources */,
 				DD8AB0DE27B672B800343699 /* Images.xcassets in Resources */,
 				DD8AB0B427B64D4E00343699 /* Assets.xcassets in Resources */,
+				DD31AD6E27B7C9CA0094C7FF /* ExportTemplate.storyboard in Resources */,
 				DD8AB0B227B64D4C00343699 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,19 +423,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD8AB0FB27B6B10600343699 /* ResumeDetailViewModel.swift in Sources */,
+				DD31AD7327B89FEF0094C7FF /* TemplateSelectionViewController.swift in Sources */,
+				DD8AB10127B74D3D00343699 /* UIimage+Crop.swift in Sources */,
+				DD31AD7527B8A1580094C7FF /* TemplateSelectionViewModel.swift in Sources */,
 				DD8AB0AF27B64D4C00343699 /* ViewController.swift in Sources */,
+				DD8AB10827B7710800343699 /* EducationViewController.swift in Sources */,
+				DD8AB0FF27B7371200343699 /* UIScrollView+Keyboard.swift in Sources */,
+				DD8AB10A27B7711500343699 /* ProjectViewController.swift in Sources */,
 				DD8AB0EF27B6A1CE00343699 /* LocalData.swift in Sources */,
 				DD8AB0E627B6747E00343699 /* ResumeListViewModel.swift in Sources */,
 				DD8AB0AB27B64D4C00343699 /* AppDelegate.swift in Sources */,
+				DD8AB10327B76E0A00343699 /* UIButton+Action.swift in Sources */,
 				DD8AB0F927B6B0F000343699 /* ResumeDetailViewController.swift in Sources */,
 				DD8AB0F427B6A8AB00343699 /* ErrorAlert.swift in Sources */,
 				DD8AB0AD27B64D4C00343699 /* SceneDelegate.swift in Sources */,
 				DD8AB0E427B6746F00343699 /* ResumeListViewController.swift in Sources */,
 				DD8AB0E827B6754800343699 /* Box.swift in Sources */,
 				DD8AB0E227B6745D00343699 /* ResumeTableViewCell.swift in Sources */,
+				DD8AB10527B770E000343699 /* WorkExperienceViewController.swift in Sources */,
 				DD8AB0EA27B6756500343699 /* ResumeInfo.swift in Sources */,
 				DD8AB0F227B6A41800343699 /* ResumeManager.swift in Sources */,
-				DD8AB0DC27B66F7400343699 /* UIView+Corner.swift in Sources */,
+				DD8AB0DC27B66F7400343699 /* UIView+Copy+Corner.swift in Sources */,
 				DD8AB0F727B6AEA700343699 /* CustomNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

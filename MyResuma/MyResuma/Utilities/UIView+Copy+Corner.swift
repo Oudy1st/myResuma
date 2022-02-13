@@ -7,11 +7,20 @@
 
 import UIKit
 
+extension UIView
+{
+    func copyView() -> UIView?
+    {
+        guard let archivedData =  try? NSKeyedArchiver.archivedData(withRootObject: self, requiringSecureCoding: false)
+        else {
+           return nil
+       }
+        return try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(archivedData) as? UIView
+//        return NSKeyedUnarchiver.unarchiveObject(with: NSKeyedArchiver.archivedData(withRootObject: self)) as? UIView
+    }
+}
 
 extension UIView {
-    
-    
-    
     @IBInspectable
     var cornerRadius: CGFloat {
         get {

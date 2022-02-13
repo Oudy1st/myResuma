@@ -13,6 +13,7 @@ class LocalData {
     enum DataKey:String,CaseIterable
     {
         case resumeList = "RESUME_LIST"
+        case exportingResume = "EXPORTING_RESUME"
     }
     
     //MARK: local Data

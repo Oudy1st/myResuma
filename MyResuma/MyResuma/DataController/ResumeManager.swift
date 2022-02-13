@@ -70,4 +70,23 @@ class ResumeManager {
     }
     
     
+    
+    
+    
+    /// exporting resume
+    ///
+    static func loadExportingResume() -> ResumeInfo? {
+        if let resume:ResumeInfo = LocalData.loadObject(.exportingResume) {
+            return resume
+        }
+        else {
+            return nil
+        }
+    }
+    
+    
+    static func saveExportingResume(resume:ResumeInfo) -> Bool {
+        return LocalData.saveObject(.exportingResume, item: resume)
+    }
+    
 }

@@ -14,6 +14,19 @@ class ResumeInfo: Codable {
     var title:String!
     var profileImageData:Data?
     
+    //general information
+    var mobile:String?
+    var email:String?
+    var address:String?
+    var careerObjective:String?
+    var totalYearOfExp:String?
+    
+    
+    var workExperiences:[WorkExperience]?
+    var skills:[Skill]?
+    var projectExperiences:[ProjectExperience]?
+    var educations:[Education]?
+    
     func profileImage() -> UIImage {
         if let imageData = self.profileImageData,
            let image = UIImage.init(data: imageData) {
@@ -32,5 +45,35 @@ class ResumeInfo: Codable {
         
         return copy
     }
+}
+
+class WorkExperience:Codable {
+    var workID:String = UUID.init().uuidString
+    var companyName:String?
+    var startYear:String?
+    var endYear:String?
+}
+
+class ProjectExperience:Codable {
+    var projectID:String = UUID.init().uuidString
+    var name:String?
+    var teamSize:String?
+    var summary:String?
+    var techUsed:String?
+    var role:String?
+}
+
+class Education:Codable {
+    var educationID:String = UUID.init().uuidString
+    var name:String?
+    var level:String?
+    var passingYear:String?
+    var isPercentage:Bool?
+    var score:String?
+}
+
+class Skill:Codable {
+    var skillID:String = UUID.init().uuidString
+    var name:String?
 }
 

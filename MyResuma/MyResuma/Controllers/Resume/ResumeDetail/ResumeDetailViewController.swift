@@ -37,7 +37,7 @@ class ResumeDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         
@@ -76,10 +76,10 @@ class ResumeDetailViewController: UIViewController {
         self.tableViewResumeDetail.unregisterKeyboardNotificationCenter()
     }
     
-
+    
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.destination {
@@ -100,7 +100,7 @@ class ResumeDetailViewController: UIViewController {
         }
     }
     
-
+    
     
     // MARK: - Action
     
@@ -109,7 +109,7 @@ class ResumeDetailViewController: UIViewController {
             self.performSegue(withIdentifier: "goExport", sender:nil)
         }
     }
-
+    
     @IBAction func headerDidTapped(_ sender: Any) {
         self.tableViewResumeDetail.endEditing(true)
     }
@@ -145,7 +145,7 @@ extension ResumeDetailViewController : UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    
+        
         switch section {
         case 0 : return (self.viewModel.resume.value.workExperiences?.count ?? 0)
         case 1 : return (self.viewModel.resume.value.skills?.count ?? 0)
@@ -157,24 +157,24 @@ extension ResumeDetailViewController : UITableViewDelegate, UITableViewDataSourc
         }
     }
     
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        switch section {
-//        case 0 : return "Work Summary"
-//        case 1 : return "Skills"
-//        case 2 : return "Education Details"
-//        case 3 : return "Project Details"
-//            
-//        default:
-//            return "Unknown"
-//        }
-//    }
+    //    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    //        switch section {
+    //        case 0 : return "Work Summary"
+    //        case 1 : return "Skills"
+    //        case 2 : return "Education Details"
+    //        case 3 : return "Project Details"
+    //
+    //        default:
+    //            return "Unknown"
+    //        }
+    //    }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = headerView.copyView()
         let lblTitle = view?.viewWithTag(1) as? UILabel
         let btnAdd = view?.viewWithTag(2) as? UIButton
         btnAdd?.cornerRadius = (btnAdd?.frame.size.width) ?? 0
-//        btnAdd?.cornerRadius = ((btnAdd?.frame.size.width) ?? 0)/2.0
+        //        btnAdd?.cornerRadius = ((btnAdd?.frame.size.width) ?? 0)/2.0
         switch section {
         case 0 : lblTitle?.text = "Work Summary"
             btnAdd?.addAction(for: .touchUpInside, action: {
@@ -196,7 +196,7 @@ extension ResumeDetailViewController : UITableViewDelegate, UITableViewDataSourc
                 self.showProjectInput()
             })
             break
-
+            
             
             
         default:
@@ -265,7 +265,7 @@ extension ResumeDetailViewController : UITableViewDelegate, UITableViewDataSourc
         case 3 :
             self.showProjectInput(indexPath.row)
             break
-
+            
             
             
         default:
@@ -283,7 +283,7 @@ extension ResumeDetailViewController : UITableViewDelegate, UITableViewDataSourc
             self.viewModel.deleteItem(indexPath: indexPath)
         }
     }
-
+    
 }
 
 //MARK: - Show Input Options
@@ -329,7 +329,7 @@ extension ResumeDetailViewController {
 
 //MARK: - Text Input Delegate
 extension ResumeDetailViewController : UITextFieldDelegate, UITextViewDelegate {
- 
+    
     
     func scrollRectToVisible(_ view:UIView) {
         
@@ -401,6 +401,11 @@ extension ResumeDetailViewController:UIImagePickerControllerDelegate, UINavigati
             alertC.addAction(.init(title: "Album", style: .default, handler: { [weak self] _ in
                 self?.openAlbum()
             }))
+            
+            if let popoverController = alertC.popoverPresentationController {
+                popoverController.sourceView = imageViewProfile
+            }
+            
             self.present(alertC, animated: true, completion: nil)
         }
         else
@@ -413,14 +418,14 @@ extension ResumeDetailViewController:UIImagePickerControllerDelegate, UINavigati
     func openCamera() {
         self.imagePickerController = UIImagePickerController()
         
-
+        
         self.imagePickerController.sourceType = .camera
         self.imagePickerController.cameraCaptureMode = .photo
         self.imagePickerController.showsCameraControls = true
         
         self.imagePickerController.delegate = self
-
-
+        
+        
         self.present(self.imagePickerController, animated: true, completion: nil)
     }
     
@@ -430,14 +435,14 @@ extension ResumeDetailViewController:UIImagePickerControllerDelegate, UINavigati
         self.imagePickerController.sourceType = .savedPhotosAlbum
         
         self.imagePickerController.delegate = self
-
-
+        
+        
         self.present(self.imagePickerController, animated: true, completion: nil)
     }
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-
+        
         DispatchQueue.main.async {
             
             if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage,
@@ -445,10 +450,10 @@ extension ResumeDetailViewController:UIImagePickerControllerDelegate, UINavigati
             {
                 self.viewModel.updateProfileImage(croppedImage)
             }
-
-
+            
+            
             picker.dismiss(animated: true, completion: nil)
-
+            
         }
     }
 }

@@ -54,6 +54,11 @@ class PDFPreviewViewController: UIViewController {
         self.viewModel.preparePDFFile { url in
             
             let activityVC = UIActivityViewController.init(activityItems: [url], applicationActivities: nil)
+            
+            if let popoverController = activityVC.popoverPresentationController {
+                popoverController.sourceView = sender as! UIView
+            }
+            
             present(activityVC, animated: true)
         }
     }
